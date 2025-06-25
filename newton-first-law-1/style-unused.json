@@ -1,0 +1,28 @@
+{
+  "colorScheme": {
+    "primary": "#4A6FA5",
+    "secondary": "#FF6B6B",
+    "accent": "#6ECCAF",
+    "background": "#F9F7F7",
+    "text": "#333333"
+  },
+  "typography": {
+    "heading": "'Fredoka One', cursive",
+    "body": "'Nunito', sans-serif"
+  },
+  "elements": {
+    "borderRadius": "12px",
+    "boxShadow": "0 4px 12px rgba(0,0,0,0.1)",
+    "animationSpeed": "0.3s"
+  },
+  "components": {
+    "button": {
+      "padding": "10px 20px",
+      "hoverEffect": "scale(1.05)"
+    },
+    "card": {
+      "padding": "20px",
+      "margin": "15px 0"
+    }
+  }
+}

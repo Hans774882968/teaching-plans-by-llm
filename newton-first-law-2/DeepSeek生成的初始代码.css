@@ -1,0 +1,522 @@
+:root {
+  --primary: #4A90E2;
+  --secondary: #FF6B6B;
+  --accent: #FFD166;
+  --background: rgb(178, 222, 236);
+  --sectionBackground: rgb(130, 205, 230);
+  --text: #2d3748;
+  --highlight: #FF6B6B;
+  --important: #4A90E2;
+
+  --titleFont: 'Fredoka One', cursive;
+  --bodyFont: 'Nunito', sans-serif;
+
+  --titleSize: 2.5rem;
+  --sectionTitleSize: 1.8rem;
+
+  --cardShadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --hoverScale: scale(1.03);
+  --transition: all 0.3s ease;
+
+  --borderRadius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--bodyFont);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  padding-bottom: 60px;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%),
+    radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 20%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 头部样式 */
+header {
+  text-align: center;
+  padding: 30px 0;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 0 0 var(--borderRadius) var(--borderRadius);
+  box-shadow: var(--cardShadow);
+  margin-bottom: 30px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  transform: rotate(30deg);
+  z-index: 0;
+}
+
+header h1 {
+  font-family: var(--titleFont);
+  font-size: var(--titleSize);
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+/* 伙伴区域 */
+.partner-section {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--cardShadow);
+  transition: var(--transition);
+}
+
+.partner-section:hover {
+  transform: var(--hoverScale);
+}
+
+.partner-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--sectionBackground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 20px;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conan-avatar {
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(45deg, #2c3e50, #4a6491);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.partner-text {
+  flex: 1;
+}
+
+.partner-text h2 {
+  font-family: var(--titleFont);
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* 知识讲解部分 */
+.knowledge-section {
+  background-color: var(--sectionBackground);
+  border-radius: var(--borderRadius);
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: var(--cardShadow);
+}
+
+.section-title {
+  font-family: var(--titleFont);
+  font-size: var(--sectionTitleSize);
+  color: var(--primary);
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 3px dashed var(--accent);
+}
+
+.content-card {
+  background-color: white;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--cardShadow);
+}
+
+.content-card h3 {
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.content-card p {
+  margin-bottom: 15px;
+}
+
+.highlight {
+  background-color: rgba(255, 214, 102, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.important {
+  background-color: rgba(74, 144, 226, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/* 互动模块 */
+.interactive-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .interactive-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.simulator,
+.challenge {
+  background-color: white;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  box-shadow: var(--cardShadow);
+  transition: var(--transition);
+}
+
+.simulator:hover,
+.challenge:hover {
+  transform: var(--hoverScale);
+}
+
+.simulator h3,
+.challenge h3 {
+  color: var(--secondary);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* 模拟器样式 */
+.physics-simulator {
+  height: 250px;
+  background: linear-gradient(to bottom, #87CEEB, #E0F7FA);
+  border-radius: var(--borderRadius);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 2px solid var(--primary);
+}
+
+.object {
+  width: 50px;
+  height: 50px;
+  background-color: var(--secondary);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: var(--bodyFont);
+  font-weight: bold;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* 挑战样式 */
+.fill-blank {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: var(--borderRadius);
+  border: 1px dashed var(--accent);
+  margin-bottom: 15px;
+}
+
+.blank {
+  display: inline-block;
+  width: 120px;
+  border-bottom: 2px solid var(--primary);
+  margin: 0 5px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/* 测验部分 */
+.quiz-section {
+  background-color: white;
+  border-radius: var(--borderRadius);
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: var(--cardShadow);
+}
+
+.question {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: var(--borderRadius);
+  background-color: #f8f9fa;
+}
+
+.question p {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option {
+  padding: 10px 15px;
+  background-color: #e9ecef;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.option:hover {
+  background-color: var(--accent);
+}
+
+.option.selected {
+  background-color: var(--primary);
+  color: white;
+}
+
+.option.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.option.incorrect {
+  background-color: #f44336;
+  color: white;
+}
+
+/* 总结部分 */
+.conclusion {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: var(--borderRadius);
+  padding: 20px;
+  box-shadow: var(--cardShadow);
+  transition: var(--transition);
+}
+
+.conclusion:hover {
+  transform: var(--hoverScale);
+}
+
+.conclusion-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--sectionBackground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 20px;
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conclusion-content {
+  flex: 1;
+}
+
+.conclusion-content h2 {
+  font-family: var(--titleFont);
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.conclusion-content p {
+  margin-bottom: 15px;
+}
+
+.check-button {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+.check-button:hover {
+  background-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  display: none;
+}
+
+.feedback {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: var(--borderRadius);
+  text-align: center;
+  font-weight: bold;
+}
+
+.success {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #2E7D32;
+}
+
+.failure {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #C62828;
+}
+
+.animation-area {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  margin: 20px 0;
+  background: linear-gradient(to bottom, #e0f7fa, #b2ebf2);
+  border-radius: var(--borderRadius);
+}
+
+.moving-object {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 45px;
+  left: -100px;
+  animation: moveObject 8s linear infinite;
+}
+
+@keyframes moveObject {
+  0% {
+    left: -100px;
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-30px);
+  }
+
+  50% {
+    left: calc(100% - 60px);
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    left: -100px;
+    transform: translateY(0);
+  }
+}
+
+.friction-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.friction-label {
+  font-weight: bold;
+}
+
+#frictionSlider {
+  width: 70%;
+}
+
+.physics-principle {
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  color: white;
+  padding: 15px;
+  border-radius: var(--borderRadius);
+  margin: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: var(--cardShadow);
+}

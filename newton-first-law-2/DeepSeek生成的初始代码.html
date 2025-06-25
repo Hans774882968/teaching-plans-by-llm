@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>牛顿第一定律侦探课 | Hans物理实验室</title>
+  <link
+    href="./fredoka-one.css"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="DeepSeek生成的初始代码.css"
+  >
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>🔍 牛顿第一定律侦探课 🧪</h1>
+      <p>和名侦探柯南一起破解惯性之谜！</p>
+    </header>
+
+    <div class="partner-section">
+      <div class="partner-image">
+        <div class="conan-avatar">柯南</div>
+      </div>
+      <div class="partner-text">
+        <h2>嘿，Hans！我是你的学习伙伴柯南</h2>
+        <p>今天我们要一起破解物理学中著名的"惯性之谜"。准备好开始我们的科学探案了吗？真相永远只有一个！</p>
+      </div>
+    </div>
+
+    <div class="knowledge-section">
+      <h2 class="section-title">📚 知识讲解：牛顿第一定律</h2>
+
+      <div class="content-card">
+        <h3>定律定义</h3>
+        <p><span class="important">牛顿第一定律</span>，也被称为<span class="highlight">惯性定律</span>，指出：</p>
+        <p class="physics-principle">"任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。"</p>
+      </div>
+
+      <div class="content-card">
+        <h3>关键概念解析</h3>
+        <p><span class="highlight">惯性</span>：物体保持其运动状态不变的性质，是物质的固有属性。</p>
+        <p><span class="important">质量越大，惯性越大</span>：质量是衡量物体惯性大小的物理量。</p>
+        <p>外力：改变物体运动状态的唯一原因。</p>
+      </div>
+
+      <div class="content-card">
+        <h3>现实生活中的例子</h3>
+        <ul>
+          <li>公交车突然启动时，乘客会向后倾倒</li>
+          <li>紧急刹车时，乘客会向前倾</li>
+          <li>抖落雨伞上的水珠</li>
+          <li>航天器在太空中关闭引擎后仍保持运动</li>
+        </ul>
+      </div>
+
+      <div class="animation-area">
+        <div class="moving-object">m=2kg</div>
+      </div>
+    </div>
+
+    <h2 class="section-title">🔬 实验互动模块</h2>
+    <div class="interactive-section">
+      <div class="simulator">
+        <h3>惯性模拟实验室</h3>
+        <p>调整摩擦力，观察物体运动的变化：</p>
+
+        <div class="physics-simulator">
+          <div
+            class="object"
+            id="physicsObject"
+          >箱子</div>
+        </div>
+
+        <div class="friction-control">
+          <span class="friction-label">摩擦力：</span>
+          <input
+            type="range"
+            id="frictionSlider"
+            min="0"
+            max="100"
+            value="30"
+          >
+          <span id="frictionValue">30%</span>
+        </div>
+
+        <div class="controls">
+          <button id="startBtn">启动</button>
+          <button id="stopBtn">停止</button>
+          <button id="resetBtn">重置</button>
+        </div>
+      </div>
+
+      <div class="challenge">
+        <h3>记忆挑战</h3>
+        <p>完成下面的定律表述：</p>
+
+        <div class="fill-blank">
+          <p>任何物体都要保持<span
+              class="blank"
+              id="blank1"
+            >匀速直线运动</span>或<span
+              class="blank"
+              id="blank2"
+            >静止状态</span>，直到<span
+              class="blank"
+              id="blank3"
+            >外力</span>迫使它改变运动状态为止。</p>
+        </div>
+
+        <button id="checkBlankBtn">检查答案</button>
+        <div
+          id="blankFeedback"
+          class="feedback hidden"
+        ></div>
+
+        <div
+          class="physics-principle"
+          style="margin-top: 20px;"
+        >
+          <p>质量是物体惯性大小的量度！</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz-section">
+      <h2 class="section-title">🧠 知识挑战</h2>
+
+      <div class="question">
+        <p>1. 当公交车突然启动时，站着的乘客为什么会向后倾倒？</p>
+        <div class="options">
+          <div
+            class="option"
+            data-correct="false"
+          >因为受到向后的推力</div>
+          <div
+            class="option"
+            data-correct="true"
+          >因为惯性要保持原来的静止状态</div>
+          <div
+            class="option"
+            data-correct="false"
+          >因为重力作用</div>
+          <div
+            class="option"
+            data-correct="false"
+          >因为空气阻力</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>2. 以下哪个物体的惯性最大？</p>
+        <div class="options">
+          <div
+            class="option"
+            data-correct="false"
+          >乒乓球 (m=0.01kg)</div>
+          <div
+            class="option"
+            data-correct="false"
+          >篮球 (m=0.6kg)</div>
+          <div
+            class="option"
+            data-correct="true"
+          >保龄球 (m=7kg)</div>
+          <div
+            class="option"
+            data-correct="false"
+          >足球 (m=0.4kg)</div>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>3. 在太空中飞行的航天器关闭引擎后，会怎样运动？</p>
+        <div class="options">
+          <div
+            class="option"
+            data-correct="false"
+          >立即停止</div>
+          <div
+            class="option"
+            data-correct="false"
+          >速度逐渐减小</div>
+          <div
+            class="option"
+            data-correct="true"
+          >保持匀速直线运动</div>
+          <div
+            class="option"
+            data-correct="false"
+          >做圆周运动</div>
+        </div>
+      </div>
+
+      <div
+        class="controls"
+        style="justify-content: center; margin-top: 20px;"
+      >
+        <button id="checkQuizBtn">检查答案</button>
+        <button id="resetQuizBtn">重置测验</button>
+      </div>
+
+      <div
+        id="quizFeedback"
+        class="feedback hidden"
+        style="margin-top: 20px;"
+      ></div>
+    </div>
+
+    <div class="conclusion">
+      <div class="conclusion-image">
+        <div
+          class="conan-avatar"
+          style="background: linear-gradient(45deg, #4CAF50, #81C784);"
+        >👍</div>
+      </div>
+      <div class="conclusion-content">
+        <h2>太棒了，Hans！</h2>
+        <p>你已经成功破解了牛顿第一定律的谜题！记住，惯性是物体保持运动状态的性质，外力才是改变运动状态的原因。</p>
+        <p>继续用你敏锐的科学思维去探索物理世界的更多奥秘吧！</p>
+        <button class="check-button">开启下一个物理谜题 →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="DeepSeek生成的初始代码.js"></script>
+</body>
+
+</html>

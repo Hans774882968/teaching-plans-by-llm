@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>牛顿第一定律互动学习</title>
+  <link
+    href="./fredoka-one.css"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+  <header>
+    <div class="logo">物理探险家</div>
+    <h1 id="main-title">探索牛顿第一定律</h1>
+    <div class="subtitle">惯性定律的奇妙世界</div>
+  </header>
+
+  <main>
+    <section
+      id="intro-section"
+      class="card"
+    >
+      <h2>为什么物体喜欢保持原状？</h2>
+      <p>你有没有想过：为什么公交车突然启动时你会向后倒？为什么急刹车时你会向前倾？这一切都归功于牛顿第一定律——惯性定律！</p>
+      <div class="animation-area">
+        <div class="bus">
+          <div class="passenger"></div>
+        </div>
+        <div class="controls">
+          <button id="bus-start">启动</button>
+          <button id="bus-stop">刹车</button>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="concept-section"
+      class="card"
+    >
+      <h2>牛顿第一定律是什么？</h2>
+      <div class="concept-visual">
+        <div class="law-statement">
+          <p>牛顿第一定律（Newton's First Law）：任何物体都要保持匀速直线运动或静止状态，直到外力迫使它改变运动状态为止。</p>
+          <p class="simple">简单来说：物体会保持原来的状态，除非有外力改变它！</p>
+        </div>
+        <div class="inertia-example">
+          <div
+            class="object"
+            id="object1"
+          ></div>
+          <div class="force-arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="experiment-section"
+      class="card"
+    >
+      <h2>动手实验：探索惯性</h2>
+      <p>试试下面的模拟实验，观察不同情况下物体的运动状态变化！</p>
+
+      <div class="experiment-container">
+        <div class="experiment-controls">
+          <div class="friction-control">
+            <label for="friction">摩擦力：</label>
+            <input
+              type="range"
+              id="friction"
+              min="0"
+              max="100"
+              value="30"
+            >
+            <span id="friction-value">30%</span>
+          </div>
+          <div class="force-control">
+            <label for="force">推力大小：</label>
+            <input
+              type="range"
+              id="force"
+              min="0"
+              max="100"
+              value="50"
+            >
+            <span id="force-value">50%</span>
+          </div>
+          <button id="start-experiment">开始实验</button>
+          <button id="reset-experiment">重置</button>
+        </div>
+
+        <div class="experiment-area">
+          <div class="surface"></div>
+          <div
+            class="cart"
+            id="experiment-cart"
+          ></div>
+          <div class="force-indicator"></div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="quiz-section"
+      class="card"
+    >
+      <h2>知识挑战</h2>
+      <div class="quiz-container">
+        <!-- 动态生成测验题目 -->
+      </div>
+    </section>
+
+    <section
+      id="real-life-section"
+      class="card"
+    >
+      <h2>生活中的惯性现象</h2>
+      <div class="examples-container">
+        <!-- 动态生成生活实例 -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2023 物理探险家 | 牛顿第一定律互动学习</p>
+    <p>寓教于乐，探索物理的奇妙世界</p>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
