@@ -218,4 +218,9 @@ document.addEventListener('DOMContentLoaded', () => {
   setupExperiment();
   setupMemorizationChallenge();
   setupQuiz();
+
+  const checkButton = document.querySelector('.check-button');
+  checkButton.addEventListener('click', () => {
+    alert('待定~');
+  });
 });

@@ -1,5 +1,9 @@
 [TOC]
 
+## 效果
+
+![](./README_assets/1-screenshot.gif)
+
 ## 提示词
 
 下面这版提示词失败了，但还是有意义的。
