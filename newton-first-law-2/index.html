@@ -52,13 +52,10 @@
       </div>
 
       <div class="content-card">
-        <h3>现实生活中的例子</h3>
-        <ul>
-          <li>公交车突然启动时，乘客会向后倾倒</li>
-          <li>紧急刹车时，乘客会向前倾</li>
-          <li>抖落雨伞上的水珠</li>
-          <li>航天器在太空中关闭引擎后仍保持运动</li>
-        </ul>
+        <h3>生活中的惯性现象</h3>
+        <div class="life-examples-container">
+          <!-- 动态生成生活实例 -->
+        </div>
       </div>
 
       <div class="animation-area">
@@ -66,77 +63,95 @@
       </div>
     </div>
 
-    <h2 class="section-title">🔬 实验互动模块</h2>
     <div class="interactive-section">
-      <div class="simulator">
-        <h3>惯性模拟实验室</h3>
-        <p>调整摩擦力，观察物体运动的变化：</p>
+      <h2 class="section-title">🔬 实验互动模块</h2>
+      <div class="interactive-container">
+        <div class="simulator">
+          <h3>惯性模拟实验室</h3>
+          <p>调整摩擦力，观察物体运动的变化：</p>
 
-        <div class="physics-simulator">
+          <div class="physics-simulator">
+            <div
+              class="object"
+              id="physicsObject"
+            >箱子</div>
+          </div>
+
+          <div class="friction-control">
+            <span class="friction-label">摩擦力：</span>
+            <input
+              type="range"
+              id="frictionSlider"
+              min="0"
+              max="100"
+              value="30"
+            >
+            <span id="frictionValue">30%</span>
+          </div>
+
+          <div class="force-control">
+            <span class="force-label">推力大小：</span>
+            <input
+              type="range"
+              id="forceSlider"
+              min="0"
+              max="100"
+              value="50"
+            >
+            <span id="forceValue">50%</span>
+          </div>
+
+          <div class="controls">
+            <button id="startBtn">启动</button>
+            <button id="resetBtn">重置</button>
+          </div>
+        </div>
+
+        <div class="challenge">
+          <h3>记忆挑战</h3>
+          <p>完成下面的定律表述：</p>
+
+          <div class="fill-blank">
+            <p>任何物体都要保持
+              <input
+                type="text"
+                class="blank"
+                id="blank1"
+                placeholder="输入答案"
+                maxlength="10"
+              >
+              或
+              <input
+                type="text"
+                class="blank"
+                id="blank2"
+                placeholder="输入答案"
+                maxlength="10"
+              >
+              ，直到
+              <input
+                type="text"
+                class="blank"
+                id="blank3"
+                placeholder="输入答案"
+                maxlength="10"
+              >
+              迫使它改变运动状态为止。
+            </p>
+          </div>
+
+          <button id="checkBlankBtn">检查答案</button>
           <div
-            class="object"
-            id="physicsObject"
-          >箱子</div>
-        </div>
+            id="blankFeedback"
+            class="feedback hidden"
+          ></div>
 
-        <div class="friction-control">
-          <span class="friction-label">摩擦力：</span>
-          <input
-            type="range"
-            id="frictionSlider"
-            min="0"
-            max="100"
-            value="30"
+          <div
+            class="physics-principle"
+            style="margin-top: 20px;"
           >
-          <span id="frictionValue">30%</span>
-        </div>
-
-        <div class="force-control">
-          <span class="force-label">推力大小：</span>
-          <input
-            type="range"
-            id="forceSlider"
-            min="0"
-            max="100"
-            value="50"
-          >
-          <span id="forceValue">50%</span>
-        </div>
-
-        <div class="controls">
-          <button id="startBtn">启动</button>
-          <button id="resetBtn">重置</button>
-        </div>
-      </div>
-
-      <div class="challenge">
-        <h3>记忆挑战</h3>
-        <p>完成下面的定律表述：</p>
-
-        <div class="fill-blank">
-          <p>任何物体都要保持<span
-              class="blank"
-              id="blank1"
-            >匀速直线运动</span>或<span
-              class="blank"
-              id="blank2"
-            >静止状态</span>，直到<span
-              class="blank"
-              id="blank3"
-            >外力</span>迫使它改变运动状态为止。</p>
-        </div>
-
-        <button id="checkBlankBtn">检查答案</button>
-        <div
-          id="blankFeedback"
-          class="feedback hidden"
-        ></div>
-
-        <div
-          class="physics-principle"
-          style="margin-top: 20px;"
-        >
-          <p>质量是物体惯性大小的量度！</p>
+            <p>质量是物体惯性大小的量度！</p>
+          </div>
         </div>
       </div>
     </div>
@@ -241,6 +256,7 @@
     </div>
   </div>
 
+  <script src="index-config.js"></script>
   <script src="index.js"></script>
 </body>
 

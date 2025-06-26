@@ -72,6 +72,7 @@ function setupExperiment() {
   const resetBtn = document.getElementById('reset-experiment');
   const cart = document.getElementById('experiment-cart');
   const forceIndicator = document.querySelector('.force-indicator');
+  const experimentArea = document.querySelector('.experiment-area');
 
   // 更新滑块值显示
   frictionSlider.addEventListener('input', () => {
@@ -103,7 +104,6 @@ function setupExperiment() {
       position += velocity;
 
       // 获取实验区域宽度
-      const experimentArea = document.querySelector('.experiment-area');
       const areaWidth = experimentArea.clientWidth;
 
       // 计算最大位置（距离右侧50px）
